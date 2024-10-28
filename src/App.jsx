@@ -10,7 +10,17 @@ function App() {
     <>
     <h1>Hello World</h1>
     {/* <h2>Learning to code with React</h2>*/}
-    
+    <p>The currently active users list:</p>
+      <ul>
+      {
+        users.map(function(user){
+          // returns Nathan, then John, then Jane
+          return (
+            <li> {user.name} as the {user.role} </li>
+          )
+        })
+      }
+      </ul>
     </>
   )
 }
