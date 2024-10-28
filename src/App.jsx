@@ -63,6 +63,7 @@
 // export default App;
 
 import styles from "../styles/App.module.css";
+import Form from "./components/Form.jsx";
 
 function App() {
   return (
@@ -73,6 +74,7 @@ function App() {
       <p className={styles.GreenParagraph}>
         Still, do not forget to bring your umbrella!
       </p>
+      <Form/>
     </>
   )
 }
