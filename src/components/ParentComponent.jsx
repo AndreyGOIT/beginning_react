@@ -1,9 +1,11 @@
+import { useState } from "react"
 export default function ParentComponent() {
+    const [name, setName] = useState('John')
     return <ChildComponent 
-    name="John"
-      age={29}
-      hobbies={["read books", "drink coffee"]}
-      occupation="Software Engineer"
+    name={name}
+    //   age={29}
+    //   hobbies={["read books", "drink coffee"]}
+    //   occupation="Software Engineer"
       />
   }
 
