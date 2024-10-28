@@ -1,14 +1,16 @@
 import { useState } from "react"
-export default function ParentComponent() {
-    const [name, setName] = useState('John')
-    return <ChildComponent 
-    name={name}
-    //   age={29}
-    //   hobbies={["read books", "drink coffee"]}
-    //   occupation="Software Engineer"
-      />
+
+ function ParentComponent() {
+    const [name, setName] = useState('John');
+    return (
+        <>
+        <h1>Hello {name}</h1>
+        <button onClick={()=> setName('Mark')}>Change name</button>
+        </>
+    )
   }
 
-  function ChildComponent(props){
-    return <p>Hello World! my name is {props.name}</p>
-  }
+  export default ParentComponent;
+//   function ChildComponent(props){
+//     return <p>Hello World! my name is {props.name}</p>
+//   }
