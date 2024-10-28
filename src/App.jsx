@@ -62,13 +62,18 @@
 // }
 // export default App;
 
-import './style.css';
+import styles from "../styles/App.module.css";
 
 function App() {
   return (
-      <p className="paragraph-text">
+    <>
+      <p className={styles.BlueParagraph}>
         The weather is sunny today.
       </p>
-  );
+      <p className={styles.GreenParagraph}>
+        Still, do not forget to bring your umbrella!
+      </p>
+    </>
+  )
 }
 export default App;
