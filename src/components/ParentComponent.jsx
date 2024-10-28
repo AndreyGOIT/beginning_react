@@ -1,5 +1,10 @@
 export default function ParentComponent() {
-    return <ChildComponent name='John'/>
+    return <ChildComponent 
+    name="John"
+      age={29}
+      hobbies={["read books", "drink coffee"]}
+      occupation="Software Engineer"
+      />
   }
 
   function ChildComponent(props){
