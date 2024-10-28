@@ -27,17 +27,13 @@
 // }
 
 // export default App
-export function App() {
-  const newEmails = 2
+export function App(props) {
+  const { user } = props
 
   return (
     <>
       <h1>Hello there!</h1>
-      {newEmails > 0 &&
-        <h2>
-          You have {newEmails} new emails in your inbox.
-        </h2>
-      }
+      { user? <button>Logout</button> : <button>Login</button> }
     </>
   )
 }
