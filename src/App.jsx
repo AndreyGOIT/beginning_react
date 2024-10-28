@@ -62,20 +62,39 @@
 // }
 // export default App;
 
-import styles from "../styles/App.module.css";
-import Form from "./components/Form.jsx";
+// import styles from "../styles/App.module.css";
+// import Form from "./components/Form.jsx";
 
+// function App() {
+//   return (
+//     <>
+//       <p className={styles.BlueParagraph}>
+//         The weather is sunny today.
+//       </p>
+//       <p className={styles.GreenParagraph}>
+//         Still, do not forget to bring your umbrella!
+//       </p>
+//       <Form/>
+//     </>
+//   )
+// }
+// export default App;
+
+import { useState, useEffect } from 'react';  
 function App() {
-  return (
-    <>
-      <p className={styles.BlueParagraph}>
-        The weather is sunny today.
-      </p>
-      <p className={styles.GreenParagraph}>
-        Still, do not forget to bring your umbrella!
-      </p>
-      <Form/>
-    </>
-  )
+  const [title, setTitle] = useState('');
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  const getData = async () => {
+    const response = await fetch('https://jsonplaceholder.typicode.com/todos/1');
+    const task = await response.json();
+    console.log(task)
+    setTitle(task.title);
+  };
+
+  return <h1>{title}</h1>;
 }
 export default App;
