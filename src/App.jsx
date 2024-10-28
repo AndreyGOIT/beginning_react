@@ -16,7 +16,7 @@ function App() {
         users.map(function(user){
           // returns Nathan, then John, then Jane
           return (
-            <li> {user.name} as the {user.role} </li>
+            <li key={user.id}> {user.name} as the {user.role} </li>
           )
         })
       }
