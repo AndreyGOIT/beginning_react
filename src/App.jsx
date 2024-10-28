@@ -29,14 +29,15 @@
 // export default App
 import PropTypes from 'prop-types'
 
-export default function App(props) {
-  const { user } = props
-
+export default function App() {
+  const handleClick = (event) => {
+    console.log("Hello World!");
+    console.log(event);
+  }
   return (
-    <>
-      <h1>Hello there!</h1>
-      { user ? <button>Logout</button> : <button>Login</button> }
-    </>
+    <button onClick={handleClick}>
+      Click me
+    </button>
   )
 }
 
