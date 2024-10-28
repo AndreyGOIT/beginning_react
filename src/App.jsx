@@ -27,13 +27,19 @@
 // }
 
 // export default App
-export function App(props) {
+import PropTypes from 'prop-types'
+
+export default function App(props) {
   const { user } = props
 
   return (
     <>
       <h1>Hello there!</h1>
-      { user? <button>Logout</button> : <button>Login</button> }
+      { user ? <button>Logout</button> : <button>Login</button> }
     </>
   )
+}
+
+App.propTypes = {
+  user: PropTypes.object
 }
