@@ -27,13 +27,19 @@
 // }
 
 // export default App
-function App(props) {
+export function App(props) {
   const { user } = props
 
-  if (user) {
-    return <button>Logout</button>
-  }
-  return <button>Login</button>
-}
+  let button = <button>Login</button>
 
-export default App
+  if (user) {
+    button = <button>Logout</button>
+  }
+
+  return (
+    <>
+      <h1>Hello there!</h1>
+      {button}
+    </>
+  )
+}
