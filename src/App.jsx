@@ -8,7 +8,7 @@ function App() {
   ]
   return (
     <>
-    <h1>Hello World</h1>
+    <h1 className='text-lowercase'>Hello World</h1>
     {/* <h2>Learning to code with React</h2>*/}
     <p>The currently active users list:</p>
       <ul>
